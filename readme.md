@@ -10,42 +10,42 @@ Sample output (in Discord):
 ## Usage
 <!---
 Commands to generate all example timestamps at the same time:
-discord_timestamp "on January 1st, 2023" @12:30pm
-discord_timestamp "on January 1st, 2023" @12:30pm -R
-discord_timestamp "on January 1st, 2023" @12:30pm +1w3d62s
-discord_timestamp "on January 1st, 2023" @12:30pm -3h16m
-discord_timestamp "on January 1st, 2023" @12:30pm @2:30pm
-discord_timestamp "on January 1st, 2023" @12:30pm @2pm
-discord_timestamp "on January 1st, 2023" @12:30pm on:15/3/2023
-discord_timestamp "on January 1st, 2023" @12:30pm -R on:31/12/2024 @8:45pm
+discord_timestamp "on January 1, 2023" @12:30pm
+discord_timestamp "on January 1, 2023" @12:30pm -R
+discord_timestamp "on January 1, 2023" @12:30pm +1w3d62s
+discord_timestamp "on January 1, 2023" @12:30pm -3h16m
+discord_timestamp "on January 1, 2023" @12:30pm @2:30pm
+discord_timestamp "on January 1, 2023" @12:30pm @2pm
+discord_timestamp "on January 1, 2023" @12:30pm on:15/3/2023
+discord_timestamp "on January 1, 2023" @12:30pm -R on:31/12/2024 @8:45pm
 --->
 For demonstration purposes, assume all examples were generated on January 1st, 2023 at 12:30pm in the afternoon.
 ### Default
 By default, the script uses the current date and time to generate the time stamp. Calling `discord_timestamp` will produce:
 ```
-<t:1679247000:F>
+<t:1672597800:F>
 All available formats:
-  -R <t:1679247000:R>: 0 seconds ago (example)
-  -D <t:1679247000:D>: March 19, 2023
-  -d <t:1679247000:d>: 03/19/23
-  -T <t:1679247000:T>: 12:30:00 PM
-  -t <t:1679247000:t>: 12:30 PM
-  -F <t:1679247000:F>: Sunday, March 19, 2023 12:30:00 PM
-  -f <t:1679247000:f>: 19 March 2023 12:30
+  -R <t:1672597800:R>: 0 seconds ago (example)
+  -D <t:1672597800:D>: January 1, 2023
+  -d <t:1672597800:d>: 01/01/23
+  -T <t:1672597800:T>: 12:30:00 PM
+  -t <t:1672597800:t>: 12:30 PM
+  -F <t:1672597800:F>: Sunday, January 1, 2023 12:30:00 PM
+  -f <t:1672597800:f>: 01 January 2023 12:30
 ```
 
 ### Format Codes
 Specifying a format code only changes the timestamp generated at the very top and which is copied to your clipboard. `discord_timestamp -R` will produce:
 ```
-<t:1679247000:R>
+<t:1672597800:R>
 All available formats:
-  -R <t:1679247000:R>: 0 seconds ago (example)
-  -D <t:1679247000:D>: March 19, 2023
-  -d <t:1679247000:d>: 03/19/23
-  -T <t:1679247000:T>: 12:30:00 PM
-  -t <t:1679247000:t>: 12:30 PM
-  -F <t:1679247000:F>: Sunday, March 19, 2023 12:30:00 PM
-  -f <t:1679247000:f>: 19 March 2023 12:30
+  -R <t:1672597800:R>: 0 seconds ago (example)
+  -D <t:1672597800:D>: January 1, 2023
+  -d <t:1672597800:d>: 01/01/23
+  -T <t:1672597800:T>: 12:30:00 PM
+  -t <t:1672597800:t>: 12:30 PM
+  -F <t:1672597800:F>: Sunday, January 1, 2023 12:30:00 PM
+  -f <t:1672597800:f>: 01 January 2023 12:30
 ```
 
 ### Adjusting Time and Date
@@ -58,28 +58,28 @@ The time and date can be adjusted relative to the current time and date with the
 Note: The order does not matter, e.g. `+5h23m6w` and `+6w5h23m` are identical.
 To add 1 week, 3 days, and 62 seconds to the current time, use `+1w3d62s`. `discord_timestamp +1w3d62s` will produce:
 ```
-<t:1680111062:F>
+<t:1673461862:F>
 All available formats:
-  -R <t:1680111062:R>: 0 seconds ago (example)
-  -D <t:1680111062:D>: March 29, 2023
-  -d <t:1680111062:d>: 03/29/23
-  -T <t:1680111062:T>: 12:31:02 PM
-  -t <t:1680111062:t>: 12:31 PM
-  -F <t:1680111062:F>: Wednesday, March 29, 2023 12:31:02 PM
-  -f <t:1680111062:f>: 29 March 2023 12:31
+  -R <t:1673461862:R>: 0 seconds ago (example)
+  -D <t:1673461862:D>: January 11, 2023
+  -d <t:1673461862:d>: 01/11/23
+  -T <t:1673461862:T>: 12:31:02 PM
+  -t <t:1673461862:t>: 12:31 PM
+  -F <t:1673461862:F>: Wednesday, January 11, 2023 12:31:02 PM
+  -f <t:1673461862:f>: 11 January 2023 12:31
 ```
 
 To subtract 3 hours and 16 minutes from the current time, use `-3h16m`. `discord_timestamp -3h16m` will produce:
 ```
-<t:1679235240:F>
+<t:1672586040:F>
 All available formats:
-  -R <t:1679235240:R>: 0 seconds ago (example)
-  -D <t:1679235240:D>: March 19, 2023
-  -d <t:1679235240:d>: 03/19/23
-  -T <t:1679235240:T>: 9:14:00 AM
-  -t <t:1679235240:t>: 9:14 AM
-  -F <t:1679235240:F>: Sunday, March 19, 2023 9:14:00 AM
-  -f <t:1679235240:f>: 19 March 2023 9:14
+  -R <t:1672586040:R>: 0 seconds ago (example)
+  -D <t:1672586040:D>: January 1, 2023
+  -d <t:1672586040:d>: 01/01/23
+  -T <t:1672586040:T>: 9:14:00 AM
+  -t <t:1672586040:t>: 9:14 AM
+  -F <t:1672586040:F>: Sunday, January 1, 2023 9:14:00 AM
+  -f <t:1672586040:f>: 01 January 2023 9:14
 ```
 
 ### Specifying the Time
@@ -92,28 +92,28 @@ The first two formats are intended for using with a 12-hour clock cycle and the 
 
 `discord_timestamp @2:30pm` and `discord_timestamp @14h30m` will both produce:
 ```
-<t:1679254200:F>
+<t:1672605000:F>
 All available formats:
-  -R <t:1679254200:R>: 0 seconds ago (example)
-  -D <t:1679254200:D>: March 19, 2023
-  -d <t:1679254200:d>: 03/19/23
-  -T <t:1679254200:T>: 2:30:00 PM
-  -t <t:1679254200:t>: 2:30 PM
-  -F <t:1679254200:F>: Sunday, March 19, 2023 2:30:00 PM
-  -f <t:1679254200:f>: 19 March 2023 2:30
+  -R <t:1672605000:R>: 0 seconds ago (example)
+  -D <t:1672605000:D>: January 1, 2023
+  -d <t:1672605000:d>: 01/01/23
+  -T <t:1672605000:T>: 2:30:00 PM
+  -t <t:1672605000:t>: 2:30 PM
+  -F <t:1672605000:F>: Sunday, January 1, 2023 2:30:00 PM
+  -f <t:1672605000:f>: 01 January 2023 2:30
 ```
 
 `discord_timestamp @2pm` and `discord_timestamp @14h` will both produce:
 ```
-<t:1679252400:F>
+<t:1672603200:F>
 All available formats:
-  -R <t:1679252400:R>: 0 seconds ago (example)
-  -D <t:1679252400:D>: March 19, 2023
-  -d <t:1679252400:d>: 03/19/23
-  -T <t:1679252400:T>: 2:00:00 PM
-  -t <t:1679252400:t>: 2:00 PM
-  -F <t:1679252400:F>: Sunday, March 19, 2023 2:00:00 PM
-  -f <t:1679252400:f>: 19 March 2023 2:00
+  -R <t:1672603200:R>: 0 seconds ago (example)
+  -D <t:1672603200:D>: January 1, 2023
+  -d <t:1672603200:d>: 01/01/23
+  -T <t:1672603200:T>: 2:00:00 PM
+  -t <t:1672603200:t>: 2:00 PM
+  -F <t:1672603200:F>: Sunday, January 1, 2023 2:00:00 PM
+  -f <t:1672603200:f>: 01 January 2023 2:00
 ```
 
 ### Specifying the Date
