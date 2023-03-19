@@ -156,13 +156,13 @@ All available formats:
 
 ## Format Codes
 Discord has 7 distinct format codes:
-- R
-- D
-- d
-- T
-- t
-- F
-- f
+- R - Relative Time: `0 seconds ago`
+- D - Long Date: `March 19, 2023`
+- d - Short Date: `03/19/23`
+- T - Long Time: `12:30:00 PM`
+- t - Short Time: `12:30 PM`
+- F - Long Time and Date: `Sunday, March 19, 2023 12:30:00 PM`
+- f - Short Time and Date: `19 March 2023 12:30`
 Although timestamps with all format codes and their Discord representation are printed, only the timestamp with the specified format will be copied to the clipboard. Any of these codes may be passed in as `-<code>`, e.g. `discord_timestamp -R`, will copy the Relative timestamp to you clipboard. The default is `-F`.
 
 ## Dependencies
